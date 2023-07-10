@@ -30,7 +30,6 @@ def compare_tree(first_list: list, second_list: list, third_list:list)->list:
     out[3] = out[3]/3 # здесь можно отказаться от этой строки и вернуть сразу list(map(sum, zip(first_list, second_list, third_list)))
     return out
 
-# Плохие функции углов -- их можно улучшить, добавив обертку приведения углов и уменьшив их количетсво вдвое (если получится)))
 def angle_between_ox_oy(angle: float, intensity: float, ascending: bool)->list: # positive; 0 < angle < 90 in degrees
     if angle <= 0 or angle >= 90:
         raise(f"Angle gotta be 0 < angle < 90; now angle == {angle}")
