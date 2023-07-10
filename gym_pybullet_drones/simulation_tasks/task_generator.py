@@ -26,7 +26,7 @@ class SquareTask(TaskGenerator):
             3. Возвращаем словарь
         """
         INIT_XYZS = np.array([0, 0, 1]).reshape(1,3)
-        env = CtrlAviary(drone_model=DroneModel.CF2X,
+        env = DroneEnvironment(drone_model=DroneModel.CF2X,
                          num_drones=1,
                          initial_xyzs=INIT_XYZS,
                          physics=Physics.PYB,
@@ -54,7 +54,6 @@ class SquareTask(TaskGenerator):
                    baseOrientation=p.getQuaternionFromEuler([0, 0, 0]), physicsClientId=PYBULLET_CLIENT)
 
         self.generated_task["target_position"] = [1.5, 1.5, 1]
-        wrapped_env = DroneEnvironment(env)
-        self.generated_task["env"] = wrapped_env
+        self.generated_task["env"] = env
         # wrapped_env.render()
         return self.generated_task

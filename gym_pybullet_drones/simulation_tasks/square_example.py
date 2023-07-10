@@ -82,8 +82,8 @@ class StudentSolution:
                 wp_counter = wp_counter + 1 if wp_counter < (NUM_WP - 1) else NUM_WP - 1
                 obs = env.step(action)
 
-            if i % simulation_freq_hz == 0:
-                env.render() # see the output info in console
+            # if i % simulation_freq_hz == 0:
+            #     env.render() # see the output info in console
 
             sync(i, START, env.TIMESTEP)
 
