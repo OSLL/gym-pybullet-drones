@@ -59,4 +59,3 @@ def angle_between_oz_oy(angle: float, intensity: float, ascending: bool)->list: 
     if angle <= 0 or angle >= 90:
         raise(f"Angle gotta be 0 < angle < 90; now angle == {angle}")
     return [0, math.tan(math.radians(angle)), 1, 1] if ascending else [0, -math.tan(math.radians(angle)), -1, 1]
-       
