@@ -1,3 +1,14 @@
+# Additions by Konstantin Kondratenko
+### Implemented standard drone control methods.
+1) through indications of the speed vector: movement along the axes OX, OY, OZ; formation of the direction of movement through the angle between the axes; linear combinations of vectors -- in velocity_commands.py file.
+`Files-examples`: in the important_examples folder -- square_vel.py , square_withZ_vel.py, triple_offset.py
+2) through setting the trajectory in the Cartesian coordinate system: [circle, cylinder, cone, ellipse, spiral] -- for one drone with CLI big_demo.py. Specifying position in spherical and cylindrical coordinate systems. Setting the position by incrementing values ​​along the axes relative to the previous step.
+`Files-examples`: in the important_examples folder -- all files except [square_vel.py , square_withZ_vel.py, triple_offset.py]
+
+### Sequential union of trajectories
+Combining trajectories by updated logic and signature. `Files-examples`: in the important_examples folder -- second_good_union.py, smart_good_union.py
+
+
 # gym-pybullet-drones
 
 [Simple](https://en.wikipedia.org/wiki/KISS_principle) OpenAI [Gym environment](https://gym.openai.com/envs/#classic_control) based on [PyBullet](https://github.com/bulletphysics/bullet3) for multi-agent reinforcement learning with quadrotors
